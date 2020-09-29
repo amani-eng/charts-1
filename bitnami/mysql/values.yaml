@@ -488,7 +488,7 @@ slave:
 service:
   ## MySQL Service type
   ##
-  type: ClusterIP
+  type: NodePort
 
   ## MySQL Service port
   ##
