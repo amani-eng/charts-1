@@ -84,7 +84,7 @@ root:
   ## MySQL admin password
   ## ref: https://github.com/bitnami/bitnami-docker-mysql#setting-the-root-password-on-first-run
   ##
-  password:
+  password: admin123
   ## Option to force users to specify a password. That is required for 'helm upgrade' to work properly.
   ## If it is not force, a random password will be generated.
   ##
@@ -295,7 +295,7 @@ master:
   persistence:
     ## If true, use a Persistent Volume Claim, If false, use emptyDir
     ##
-    enabled: true
+    enabled: false
     mountPath: /bitnami/mysql
     ## Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
@@ -459,7 +459,7 @@ slave:
   persistence:
     ## If true, use a Persistent Volume Claim, If false, use emptyDir
     ##
-    enabled: true
+    enabled: false
     mountPath: /bitnami/mysql
     ## Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
@@ -488,7 +488,7 @@ slave:
 service:
   ## MySQL Service type
   ##
-  type: NodePort
+  type: ClusterIP
 
   ## MySQL Service port
   ##
